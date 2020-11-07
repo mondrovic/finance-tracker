@@ -27,6 +27,13 @@ User.init(
             validate: {
                 len: [4]
             }
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isEmail: true
+            }
         }
     },
     {
@@ -44,7 +51,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User'
+        modelName: 'user'
     }
 );
 
