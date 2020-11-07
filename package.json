@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
+    "migrate": "mysql -u root -p < db/schema.sql",
     "seed": "node seeds/index.js"
   },
   "repository": {
