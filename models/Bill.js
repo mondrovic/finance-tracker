@@ -31,7 +31,15 @@ Bill.init(
       model: 'category',
       key: 'id'
     }
-  }
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'User',
+      key: 'id'
+    }
+    }
   },
   {
     sequelize,

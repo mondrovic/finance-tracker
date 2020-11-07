@@ -7,7 +7,7 @@ Bill.belongsTo(Category);
 Category.hasMany(Bill);
 
 Bill.belongsTo(User, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
   });
 
