@@ -11,14 +11,14 @@ Category.hasMany(Bill, {
   foreignKey: "category_id"
 });
 
-Bill.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-});
+// Bill.belongsTo(User, {
+//     foreignKey: 'user_id',
+//     onDelete: 'CASCADE'
+// });
 
-User.hasMany(Bill, {
-  foreignKey: "user_id"
-})
+// User.hasMany(Bill, {
+//   foreignKey: "user_id"
+// })
 
 
 module.exports = {
