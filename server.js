@@ -6,8 +6,7 @@ const session = require("express-session");
 // dotenv to hide session secret
 require("dotenv").config();
 
-// Will use for later
-// const exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,11 +28,10 @@ const sess = {
 init = () => {
   app.use(session(sess));
 
-  // Commenting out for later use
-  // const hbs = exphbs.create({});
+  const hbs = exphbs.create({});
 
-  // app.engine("handlebars", hbs.engine);
-  // app.set("view engine", "handlebars");
+  app.engine("handlebars", hbs.engine);
+  app.set("view engine", "handlebars");
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
