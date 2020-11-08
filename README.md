@@ -1,0 +1,80 @@
+## Finance-Tracker
+
+Full stack Financial application utilizing ORM with Sequelize and adhering to the Model-View-Controller paradigm. Handlebars Templating Engine was heavily utilized to modularize the views. On the back end, Express.js and SQL database are being used to provide robust REST API with multiple endpoints/routes. Authentication is required for the appropriate routes and user passwords are encrypted within the database using bcrypt. Test Driven Development has been demonstrated in this project using Jest.
+
+![licensebadge](https://img.shields.io/badge/license-CC0_1.0_Universal-blue)
+
+#### Issues
+
+- [x] [Database Connection & Initial Application Structure](https://github.com/mondrovic/Finance-Tracker/issues/1)
+- [x] [Models & Controllers](https://github.com/mondrovic/Finance-Tracker/issues/2)
+- [x] [Views / Handlebars](https://github.com/mondrovic/Finance-Tracker/issues/3)
+- [x] [Readme, Screenshots & Gifs](https://github.com/mondrovic/Finance-Tracker/issues/4)
+
+#### Table of Contents
+
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Screenshots](#Screenshots)
+- [Questions](#Questions)
+- [License](#License)
+
+#### Requirements
+
+    mysql or jawsdb
+    node
+    npm
+
+#### Installation
+
+    Create file: .env (in root directory)
+        DB_NAME='<your_database_name>'
+        DB_USER='<your_user_name>'
+        DB_PW='<your_mysql_password>'
+        SESS_SCRT='<random_generated_password'
+
+    npm i
+    npm run migrate
+    npm run seed
+
+#### Usage
+
+    Usage: node server.js [ -h | -v | -l | -a ]
+    or: npm start
+
+    [options]
+
+           -h          Display this message.
+           -v          Show version.
+           -l          Show license info.
+           -a          What is Finance-Tracker?
+
+<h6><p align="right">:cyclone: Click the image(s) below to view the live <a id="Screenshots" href="https://finance-tracker-mondrovic.herokuapp.com/">webapplication</a></p></h6>
+
+[<img src="img/Preview.png">](https://finance-tracker-mondrovic.herokuapp.com/)
+
+> Setup
+> [<img src="img/Preview.gif">](https://finance-tracker-mondrovic.herokuapp.com/)
+
+> User Routes
+> [<img src="img/Preview1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
+
+> Post Routes
+> [<img src="img/Preview2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/posts)
+
+> Comment Routes
+> [<img src="img/Preview3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/comments)
+
+> Tests Passing
+> [<img src="img/Tests.png">](https://finance-tracker-mondrovic.herokuapp.com/)
+
+#### Questions
+
+Contact me at [mondrovic1@gmail.com](mailto:mondrovic1@gmail.com) with any questions or comments.
+
+#### License
+
+`Finance-Tracker` is published under the **CC0_1.0_Universal** license.
+
+> The Creative Commons CC0 Public Domain Dedication waives copyright interest in a work you've created and dedicates it to the world-wide public domain. Use CC0 to opt out of copyright entirely and ensure your work has the widest reach. As with the Unlicense and typical software licenses, CC0 disclaims warranties. CC0 is very similar to the Unlicense.
