@@ -4,7 +4,7 @@ const { Bill, Category, User } = require("../models");
 // Render all Categories & Bills
 router.get("/", (req, res) => {
   console.log("Welcome to /");
-  res.render("main");
+  res.render("homepage");
   return;
 });
 
