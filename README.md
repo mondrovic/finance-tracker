@@ -6,10 +6,12 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 
 #### Issues
 
-- [x] [Database Connection & Initial Application Structure](https://github.com/mondrovic/Finance-Tracker/issues/1)
-- [x] [Models & Controllers](https://github.com/mondrovic/Finance-Tracker/issues/2)
-- [x] [Views / Handlebars](https://github.com/mondrovic/Finance-Tracker/issues/3)
-- [x] [Readme, Screenshots & Gifs](https://github.com/mondrovic/Finance-Tracker/issues/4)
+- [x] [setup server file](https://github.com/mondrovic/Finance-Tracker/issues/1)
+- [x] [feature/modelAssc](https://github.com/mondrovic/Finance-Tracker/issues/2)
+- [x] [added user route](https://github.com/mondrovic/Finance-Tracker/issues/3)
+- [x] [feature/apiRoutes mo](https://github.com/mondrovic/Finance-Tracker/issues/4)
+- [x] [Authentication & Initial Views](https://github.com/mondrovic/Finance-Tracker/issues/5)
+- [x] [Command Line Options & Readme File](https://github.com/mondrovic/Finance-Tracker/issues/6)
 
 #### Table of Contents
 
