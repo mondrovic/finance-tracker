@@ -7,4 +7,9 @@ router.use("/", homeRoutes);
 router.use("/dashboard", dashboardRoutes);
 router.use("/api", apiRoutes);
 
+// Display 404
+router.use("/*", (req, res) => {
+  console.log("Welcome to 404 Page");
+  res.render("signup");
+});
 module.exports = router;
