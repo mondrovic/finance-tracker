@@ -24,4 +24,10 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+// Display 404
+router.use("/*", (req, res) => {
+  console.log("Welcome to 404 Page");
+  res.render("signup");
+});
+
 module.exports = router;
