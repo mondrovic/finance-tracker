@@ -12,6 +12,9 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 - [x] [feature/apiRoutes mo](https://github.com/mondrovic/Finance-Tracker/issues/4)
 - [x] [Authentication & Initial Views](https://github.com/mondrovic/Finance-Tracker/issues/5)
 - [x] [Command Line Options & Readme File](https://github.com/mondrovic/Finance-Tracker/issues/6)
+- [x] [added hbs server & home-route reflects homepage](https://github.com/mondrovic/Finance-Tracker/issues/7)
+- [x] [fixed issue in utils/auth.js](https://github.com/mondrovic/Finance-Tracker/issues/8)
+- [x] [Redirects, Hashed User Seed & Responsiveness](https://github.com/mondrovic/Finance-Tracker/issues/9)
 
 #### Table of Contents
 
@@ -35,7 +38,7 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
         DB_NAME='<your_database_name>'
         DB_USER='<your_user_name>'
         DB_PW='<your_mysql_password>'
-        SESS_SCRT='<random_generated_password'
+        SESS_SCRT='<random_generated_password>'
 
     npm i
     npm run migrate
