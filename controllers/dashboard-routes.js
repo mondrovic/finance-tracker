@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Bill } = require("../models/");
 const withAuth = require("../utils/auth");
 
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
     Bill.findAll({
       where: {
       }
@@ -21,13 +21,13 @@ router.get("/", (req, res) => {
       });
   });
 
-  router.get("/new", (req, res) => {
+  router.get("/new", withAuth, (req, res) => {
     res.render("new-bill", {
       layout: "dashboard"
     });
   });
   
-  router.get("/edit/:id", (req, res) => {
+  router.get("/edit/:id", withAuth, (req, res) => {
     Bill.findByPk(req.params.id)
       .then(dbBillData => {
         if (dbBillData) {
