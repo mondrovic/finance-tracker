@@ -1,0 +1,31 @@
+const newFormHandler = async function(event) {
+    event.preventDefault();
+
+    const bill_name = document.querySelector('input[name="bill-type"]').value;
+    const amount = document.querySelector('input[name="bill-amount"]').value;
+
+    console.log(bill_name + " / " + amount);
+
+    if (bill_name && amount) { 
+        const response = await fetch(`/api/bills`, {
+            method: "POST",
+            body: JSON.stringify({
+              bill_name,
+              amount
+            }),
+            headers: { "Content-Type": "application/json" },
+          });
+          if (response.ok) {
+            console.log("success");
+            document.location.replace("/dashboard");
+          } else {
+            alert(response.statusText);
+          }
+
+    };
+};
+
+  
+
+
+  document.querySelector("#new-bill-form").addEventListener("submit", newFormHandler);
