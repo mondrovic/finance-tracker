@@ -82,6 +82,7 @@ a {
   width: 90%;
   margin: 10px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .text {
@@ -564,8 +565,10 @@ a {
   }
 
   .app-title {
+    width: 100%;
     font-size: 2.1rem;
     margin-bottom: 7px;
+    text-align: center;
   }
 
   .box {
@@ -575,5 +578,13 @@ a {
 
   .col-5 {
     flex: 1;
+  }
+
+  .input {
+    width: 88%;
+  }
+
+  .btn {
+    width: 88.5%;
   }
 }
