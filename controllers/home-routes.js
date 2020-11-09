@@ -1,18 +1,21 @@
 const router = require("express").Router();
-const { Bill, Category, User } = require("../models");
 
-// Render all Categories & Bills
+// Render Homepage
 router.get("/", (req, res) => {
   console.log("Welcome to /");
+  if (req.session.loggedIn) {
+    res.redirect("/dashboard");
+    return;
+  }
   res.render("homepage");
   return;
 });
 
-// Redirect User to Homepage upon Authentication
+// Redirect User to Dashboard upon Authentication
 router.get("/login", (req, res) => {
   console.log("Welcome to /login");
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
   res.render("login");
@@ -21,6 +24,10 @@ router.get("/login", (req, res) => {
 // Render Sign Up Page
 router.get("/signup", (req, res) => {
   console.log("Welcome to /signup");
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
   res.render("signup");
 });
 

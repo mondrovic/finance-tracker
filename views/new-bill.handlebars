@@ -1,16 +1,17 @@
-<div class="card">
-  <div class="card-header">
-    <h2>Create New Post</h2>
-  </div>
-  <form id="new-bill-form" class="card-body">
-    <label class="form-label" for="bill-type">Bill Name</label>
-    <input type="text" name="bill-type" class="form-input" />
-
-    <label class="form-label" for="bill-amount">Amount</label>
-    <input type="number" name="bill-amount" class="form-input"></input>
-
-    <button type="submit" class="btn">Create</button>
-  </form>
+<div class="card-header">
+  <h2>Add New Bill</h2>
 </div>
+<form class="login-form card-header col-5 box">
+  <div>
+    <label class="text" for="bill-name">Bill Name:</label>
+    <input class="input" type="text" id="bill-name" />
+  </div>
+  <div>
+    <label class="text" for="bill-amount">Cost:</label>
+    <input class="input" type="text" id="bill-amount" />
+  </div>
+  <div>
+    <button class="btn" type="submit">Create</button>
+</form>
 
 <script src="/javascript/new.js"></script>

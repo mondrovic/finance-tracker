@@ -10,6 +10,7 @@ router.use("/api", apiRoutes);
 // Display 404
 router.use("/*", (req, res) => {
   console.log("Welcome to 404 Page");
-  res.render("signup");
+  res.render("homepage");
 });
+
 module.exports = router;
