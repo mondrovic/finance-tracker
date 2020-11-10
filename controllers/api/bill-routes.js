@@ -42,7 +42,7 @@ router.post("/", (req, res) => {
     bill_name: req.body.bill_name,
     amount: req.body.amount,
     category_id: req.body.category_id,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((dbData) => res.json(dbData))
     .catch((err) => {
