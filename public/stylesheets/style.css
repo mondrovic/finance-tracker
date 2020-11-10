@@ -58,6 +58,10 @@ a {
 
 .username {
   float: right;
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1.5em;
+  padding-right: 0%;
 }
 
 .right {
@@ -73,7 +77,7 @@ a {
 .nav-links {
   color: var(--primary);
   padding: 0px 30px 30px 0px;
-  padding-right: 0%;
+  padding-right: 30px;
   display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
