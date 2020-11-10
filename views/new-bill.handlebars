@@ -1,3 +1,4 @@
+<!--
 <div class="card">
   <div class="card-header">
     <h2>Create New Post</h2>
@@ -9,10 +10,36 @@
     <label class="form-label" for="bill-amount">Amount:</label>
     <input type="number" name="bill-amount" class="form-input" />
 
-        <label class="form-label" for="category_id">Category ID:</label>
+    <label class="form-label" for="category_id">Category ID:</label>
     <input type="number" name="category_id" class="form-input" />
 
     <button type="submit" class="btn">Create</button>
+  </form>
+</div>
+
+<script src="/javascript/add-bill.js"></script>
+-->
+
+<div class="card-header">
+  <h2>Create New Bill</h2>
+</div>
+<div class="col-12">
+  <form id="new-bill-form" class="card-header col-5 box">
+    <div>
+      <label class="form-label text" for="bill-name">Bill Name:</label>
+      <input class="input" name="bill-name" type="text" />
+    </div>
+    <div>
+      <label class="form-label text" for="bill-amount">Cost:</label>
+      <input class="input" type="number" name="bill-amount" />
+    </div>
+    <div>
+      <label class="form-label text" for="category_id">Category ID:</label>
+      <input class="input" name="category_id" type="number" />
+    </div><br />
+    <div>
+      <button class="btn" type="submit">Create</button>
+    </div>
   </form>
 </div>
 
