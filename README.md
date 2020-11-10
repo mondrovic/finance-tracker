@@ -15,6 +15,9 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 - [x] [added hbs server & home-route reflects homepage](https://github.com/mondrovic/Finance-Tracker/issues/7)
 - [x] [fixed issue in utils/auth.js](https://github.com/mondrovic/Finance-Tracker/issues/8)
 - [x] [Redirects, Hashed User Seed & Responsiveness](https://github.com/mondrovic/Finance-Tracker/issues/9)
+- [x] [fixed logged in/out](https://github.com/mondrovic/Finance-Tracker/issues/10)
+- [x] [fixed userid](https://github.com/mondrovic/Finance-Tracker/issues/11)
+- [x] [Enable Helpers & Implement Tests](https://github.com/mondrovic/Finance-Tracker/issues/12)
 
 #### Table of Contents
 
