@@ -13,8 +13,8 @@ router.get("/", withAuth, (req, res) => {
       const bills = dbBillData.map((bill) => bill.get({ plain: true }));
 
       res.render("dashboard", {
-        layout: "main",
         bills,
+        loggedIn: true,
       });
     })
     .catch((err) => {
