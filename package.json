@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "start": "node server.js",
     "migrate": "mysql -u root -p < db/schema.sql",
     "seed": "node seeds/index.js"
