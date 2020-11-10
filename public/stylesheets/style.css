@@ -56,6 +56,16 @@ a {
   cursor: pointer;
 }
 
+.username {
+  float: right;
+  padding-right: 0%;
+}
+
+.right {
+  float: right;
+  margin-top: 0%;
+}
+
 .box {
   margin: 7%;
   margin-left: 13%;

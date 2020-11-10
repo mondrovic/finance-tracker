@@ -11,9 +11,10 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbBillData) => {
       const bills = dbBillData.map((bill) => bill.get({ plain: true }));
-
+      const username = req.session.username;
       res.render("dashboard", {
         bills,
+        username,
         loggedIn: true,
       });
     })
