@@ -3,15 +3,16 @@ const newFormHandler = async function(event) {
 
     const bill_name = document.querySelector('input[name="bill-type"]').value;
     const amount = document.querySelector('input[name="bill-amount"]').value;
-
-    console.log(bill_name + " / " + amount);
+    const category_id = document.querySelector('input[name="category_id"]').value;
+    console.log(bill_name + " / " + amount + " / " + category_id );
 
     if (bill_name && amount) { 
         const response = await fetch(`/api/bills`, {
             method: "POST",
             body: JSON.stringify({
-              bill_name,
-              amount
+                bill_name,
+                amount,
+                category_id
             }),
             headers: { "Content-Type": "application/json" },
           });
