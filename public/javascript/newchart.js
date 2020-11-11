@@ -19,6 +19,8 @@ window.onload = function () {
     ydata.push(billAmounts[i].textContent);
   }
 
+  console.log(xlabel, ydata);
+
   // initializes chart
   const myChart = new Chart(ctx, {
     type: "bar",
@@ -32,6 +34,9 @@ window.onload = function () {
           borderWidth: 1,
         },
       ],
+    },
+    options: {
+      responsive: true,
     },
   });
 };
