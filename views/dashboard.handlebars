@@ -12,7 +12,8 @@
 <div class="list-group col-12">
     {{#each bills}}
     <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-        <span>{{bill_name}}</span>
+        <span class="bill-name">{{bill_name}}</span>
+        <span class="bill-amount">{{amount}}</span>
     </a>
     {{/each}}
 </div>

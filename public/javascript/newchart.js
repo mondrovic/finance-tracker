@@ -1,44 +1,50 @@
 window.onload = function () {
-  var ctx = document.getElementById("myChart");
-  console.log(ctx);
-  var myChart = new Chart(ctx, {
+  // gets all elements
+  const ctx = document.getElementById("myChart");
+  const billNames = document.querySelectorAll(".bill-name");
+  const billAmounts = document.querySelectorAll(".bill-amount");
+
+  // declares variables
+  let xlabel = [];
+  let ydata = [];
+  let colors = [];
+
+  // adds all bill names to array named xlabel. Generates random color
+  for (i = 0; i < billNames.length; i++) {
+    xlabel.push(billNames[i].textContent);
+    getRandomColor(colors);
+  }
+  //adds all bill amounts to array named ydata
+  for (i = 0; i < billAmounts.length; i++) {
+    ydata.push(billAmounts[i].textContent);
+  }
+
+  // initializes chart
+  const myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      labels: xlabel, // bill names
       datasets: [
         {
-          label: "# of Votes",
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
-            "rgba(255, 159, 64, 0.2)",
-          ],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)",
-          ],
+          label: "Bills", // table name
+          data: ydata, // bill amounts
+          backgroundColor: colors, // passes in randomly generated color array
           borderWidth: 1,
         },
       ],
     },
-    options: {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
-    },
   });
 };
+
+// random color generator for chart. Passes in empty color array
+function getRandomColor(array) {
+  var hue =
+    "rgb(" +
+    Math.floor(Math.random() * 256) +
+    "," +
+    Math.floor(Math.random() * 256) +
+    "," +
+    Math.floor(Math.random() * 256) +
+    ",0.7)";
+  array.push(hue);
+}
