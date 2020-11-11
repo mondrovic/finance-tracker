@@ -27,7 +27,7 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Screenshots](#Screenshots)
-- [Creators](#Creators)
+- [Developers](#Developers)
 - [Questions](#Questions)
 - [License](#License)
 
@@ -80,21 +80,21 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 > Tests Passing
 > [<img src="img/Tests.png">](https://finance-tracker-mondrovic.herokuapp.com/)
 
-#### Creators
+#### Project Developers:
 
-#### Matthew Ondrovic
-
-> Creation in progress...
-
-#### Matthew Brassey
+### Matthew Ondrovic
 
 > Creation in progress...
 
-#### Ryan Brown
+####Matthew Brassey
 
 > Creation in progress...
 
-#### Taylor Stern
+### Ryan Brown
+
+> Creation in progress...
+
+####Taylor Stern
 
 > Project Advisor.
 
