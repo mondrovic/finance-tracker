@@ -61,10 +61,10 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 
 <h6><p align="right">:cyclone: Click the image(s) below to view the live <a id="Screenshots" href="https://finance-tracker-mondrovic.herokuapp.com/">webapplication</a></p></h6>
 
-[<img src="img/Preview.png">](https://finance-tracker-mondrovic.herokuapp.com/)
+[<img src="img/Preview.png" align="center">](https://finance-tracker-mondrovic.herokuapp.com/)
 
 > Setup
-> [<img src="img/Preview.gif">](https://finance-tracker-mondrovic.herokuapp.com/)
+> [<img src="img/Setup.gif">](https://finance-tracker-mondrovic.herokuapp.com/)
 
 > User Routes
 > [<img src="img/Preview1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
