@@ -25,9 +25,22 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get("/new", withAuth, (req, res) => {
-  res.render("new-bill", {
-    layout: "main",
-  });
+  Bill.findAll({
+    where: {
+      // Pass Session ID
+      user_id: req.session.user_id,
+    },
+  })
+    .then((dbBillData) => {
+      const username = req.session.username;
+      res.render("new-bill", {
+        username,
+        loggedIn: true,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 router.get("/edit/:id", withAuth, (req, res) => {
