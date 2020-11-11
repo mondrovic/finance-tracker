@@ -69,6 +69,10 @@ a {
   margin-top: 0%;
 }
 
+.chart {
+  max-width: 800px;
+}
+
 .box {
   margin: 7%;
   margin-left: 13%;
@@ -588,6 +592,11 @@ a {
     padding-bottom: 12px;
     margin-bottom: 0%;
     font-size: 1.3em;
+  }
+
+  .chart {
+    width: 500px;
+    margin-bottom: 30px;
   }
 
   .app-title {
