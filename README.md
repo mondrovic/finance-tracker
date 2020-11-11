@@ -82,19 +82,19 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 
 #### Project Developers:
 
-### Matthew Ondrovic
+##### Matthew Ondrovic
 
 > Creation in progress...
 
-####Matthew Brassey
+##### Matthew Brassey
 
 > Creation in progress...
 
-### Ryan Brown
+##### Ryan Brown
 
 > Creation in progress...
 
-####Taylor Stern
+##### Taylor Stern
 
 > Project Advisor.
 
