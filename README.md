@@ -18,6 +18,8 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 - [x] [fixed logged in/out](https://github.com/mondrovic/Finance-Tracker/issues/10)
 - [x] [fixed userid](https://github.com/mondrovic/Finance-Tracker/issues/11)
 - [x] [Enable Helpers & Implement Tests](https://github.com/mondrovic/Finance-Tracker/issues/12)
+- [x] [Show Authenticated User & Fix /new Controller](https://github.com/mondrovic/Finance-Tracker/issues/13)
+- [x] [feature/chartJS](https://github.com/mondrovic/Finance-Tracker/issues/14)
 
 #### Table of Contents
 
@@ -67,13 +69,13 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 > [<img src="img/Setup.gif">](https://finance-tracker-mondrovic.herokuapp.com/)
 
 > User Routes
-> [<img src="img/Preview1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
+> [<img src="img/Controller1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
 
 > Post Routes
-> [<img src="img/Preview2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/posts)
+> [<img src="img/Controller2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/posts)
 
 > Comment Routes
-> [<img src="img/Preview3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/comments)
+> [<img src="img/Controller3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/comments)
 
 > Tests Passing
 > [<img src="img/Tests.png">](https://finance-tracker-mondrovic.herokuapp.com/)
@@ -82,19 +84,19 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 
 #### Matthew Ondrovic
 
-> Creator of .
+> Creation in progress...
 
 #### Matthew Brassey
 
-> Creator of .
+> Creation in progress...
 
 #### Ryan Brown
 
-> Creator of .
+> Creation in progress...
 
 #### Taylor Stern
 
-> Creator of .
+> Project Advisor.
 
 #### Questions
 
