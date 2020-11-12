@@ -1,0 +1,23 @@
+<div class="card-header">
+    <h2>Dashboard</h2>
+</div>
+<div class="col-12">
+    <a href="/dashboard/new">
+        <h3 class="right">➕ New Bill</h3>
+    </a>
+</div>
+<div class="container col-12">
+    <canvas id="myChart" style="chart"></canvas><br />
+</div>
+
+
+<div class="list-group col-12">
+    {{#each bills}}
+    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
+        <span class="bill-name">{{bill_name}}</span>
+        <span class="bill-amount">{{amount}}</span>
+    </a>
+    {{/each}}
+</div>
+
+<script src="/javascript/newchart.js"></script>
