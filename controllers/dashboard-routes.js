@@ -47,10 +47,12 @@ router.get("/edit/:id", withAuth, (req, res) => {
     .then((dbBillData) => {
       if (dbBillData) {
         const bill = dbBillData.get({ plain: true });
-
+        const username = req.session.username;
         res.render("edit-bill", {
           layout: "main",
+          username,
           bill,
+          loggedIn: true,
         });
       } else {
         res.status(404).end();
