@@ -15,14 +15,13 @@
     <canvas id="myChart" style="chart"></canvas><br />
 </div>
 
+{{#each bills}}
+<div class="card col-12">
+    <div class="card-header"><h2 class="bill-name">{{bill_name}}</h2></div>
+    <div class="card-body"><h4>Bill Amount:<span class="bill-amount">{{amount}}</span></h4></div>
 
-<div class="list-group col-12">
-    {{#each bills}}
-    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-        <span class="bill-name">{{bill_name}}</span>
-        <span class="bill-amount">{{amount}}</span>
-    </a>
-    {{/each}}
+    
 </div>
+{{/each}}
 
 <script src="/javascript/newchart.js"></script>
