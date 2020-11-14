@@ -46,6 +46,24 @@ router.get("/new", withAuth, (req, res) => {
     });
 });
 
+router.get("/new-category", withAuth, (req, res) => {
+  Category.findAll({
+  })
+    .then((dbBillData) => {
+      const categories = dbBillData.map((bill) => bill.get({ plain: true }));
+
+      const username = req.session.username;
+      res.render("new-category", {
+        categories,
+        username,
+        loggedIn: true,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 router.get("/edit/:id", withAuth, (req, res) => {
   Bill.findByPk(req.params.id)
     .then((dbBillData) => {
