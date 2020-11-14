@@ -36,11 +36,9 @@
     <div>
       <label class="form-label text" for="category_id">Category ID:</label>
       <select class="input" name="category_id">
-          <option value="" disabled selected>Select your option</option>
-          <option value="1">Mortgage</option>
-          <option value="2">Phone</option>
-          <option value="3">Electric</option>
-          <option value="4">Water</option>
+        {{#each categories}}
+          <option value="{{this.id}}">{{this.category_name}}</option>
+        {{/each}}
       </select>
       <!--
       <input class="input" name="category_id" type="number" /> -->
