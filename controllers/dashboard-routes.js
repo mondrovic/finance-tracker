@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Bill, Category } = require("../models/");
+const { Bill, Category, User, Income } = require("../models/");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, (req, res) => {
@@ -12,10 +12,18 @@ router.get("/", withAuth, (req, res) => {
       model: Category,
       attributes: ["id", "category_name"],
     },
+    include: [{
+      model: User,
+      include:{
+        model: Income,
+        attributes: ["amount"]
+      }
+    }]
   })
     .then((dbBillData) => {
       const bills = dbBillData.map((bill) => bill.get({ plain: true }));
       const username = req.session.username;
+      console.log(bills);
 
       res.render("dashboard", {
         bills,
