@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Bill, Category } = require("../models/");
+const { Bill, Category, User, Income } = require("../models/");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, (req, res) => {
@@ -8,10 +8,23 @@ router.get("/", withAuth, (req, res) => {
       // Pass Session ID
       user_id: req.session.user_id,
     },
-    include: {
-      model: Category,
-      attributes: ["id", "category_name"],
-    },
+    include: [
+      {
+        model: Category,
+        attributes: ["id", "category_name"],
+      },
+      {
+        model: User,
+        attributes: { exclude: ["password"] },
+        include: [
+          {
+            model: Income,
+            attributes: ["amount"],
+            as: "income",
+          },
+        ],
+      },
+    ],
   })
     .then((dbBillData) => {
       const bills = dbBillData.map((bill) => bill.get({ plain: true }));
@@ -29,8 +42,7 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get("/new", withAuth, (req, res) => {
-  Category.findAll({
-  })
+  Category.findAll({})
     .then((dbBillData) => {
       const categories = dbBillData.map((bill) => bill.get({ plain: true }));
 
@@ -47,8 +59,7 @@ router.get("/new", withAuth, (req, res) => {
 });
 
 router.get("/new-category", withAuth, (req, res) => {
-  Category.findAll({
-  })
+  Category.findAll({})
     .then((dbBillData) => {
       const categories = dbBillData.map((bill) => bill.get({ plain: true }));
 

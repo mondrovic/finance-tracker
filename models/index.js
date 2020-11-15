@@ -4,10 +4,12 @@ const User = require("./User");
 const Income = require("./Income");
 
 Income.belongsTo(User, {
-  foreignKey:"user_id",
+  foreignKey: "user_id",
   onDelete: "CASCADE",
 });
-User.hasOne(Income);
+User.hasOne(Income, {
+  foreignKey: "user_id",
+});
 
 Bill.belongsTo(Category, {
   foreignKey: "category_id",
