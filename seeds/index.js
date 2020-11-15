@@ -1,6 +1,7 @@
 const seedCategories = require('./category-seeds');
 const seedBills = require('./bill-seeds');
 const seedUsers = require('./user-seeds');
+const seedIncome = require('./income-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -16,6 +17,9 @@ const seedAll = async () => {
 
     await seedBills();
     console.log('\n----- BILLS SEEDED -----\n');
+
+    await seedIncome();
+    console.log('\n----- INCOME SEEDED -----\n');
 
     process.exit(0);
 };
