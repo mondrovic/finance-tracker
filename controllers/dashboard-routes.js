@@ -25,24 +25,10 @@ router.get("/", withAuth, (req, res) => {
         ],
       },
     ],
-    // include: [
-    //   {
-    //     model: User,
-    //     attributes: { exclude: ["password"] },
-    //     include: [
-    //       {
-    //         model: Income,
-    //         attributes: ["amount"],
-    //         as: "income",
-    //       },
-    //     ],
-    //   },
-    // ],
   })
     .then((dbBillData) => {
       const bills = dbBillData.map((bill) => bill.get({ plain: true }));
       const username = req.session.username;
-      console.log(bills);
 
       res.render("dashboard", {
         bills,
