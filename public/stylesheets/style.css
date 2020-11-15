@@ -99,6 +99,10 @@ a {
   padding-left: 30px;
 }
 
+.bill-name {
+  display: inline-block;
+}
+
 .button {
   color: var(--dark);
   font-size: 1.1em;
