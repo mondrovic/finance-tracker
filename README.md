@@ -71,7 +71,7 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 > User Routes
 > [<img src="img/Controller1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
 
-> Post Routes (coming soon)
+> Bill Routes
 > [<img src="img/Controller2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/posts)
 
 > Comment Routes (coming soon)
