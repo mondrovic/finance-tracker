@@ -79,10 +79,10 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 > [<img src="img/Controller1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
 
 > Bill Routes
-> [<img src="img/Controller2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/posts)
+> [<img src="img/Controller2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/bills)
 
 > Categories & Income Routes
-> [<img src="img/Controller3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/comments)
+> [<img src="img/Controller3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/categories)
 
 > Tests Passing
 > [<img src="img/Tests.png">](https://finance-tracker-mondrovic.herokuapp.com/)
