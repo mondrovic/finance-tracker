@@ -1,10 +1,14 @@
+const ctx = document.getElementById("myChart");
+const ctx2 = document.getElementById("debtChart");
+let billNames = document.querySelectorAll(".bill-name");
+let billAmounts = document.querySelectorAll(".bill-amount");
+let income;
+let debt;
+
 window.onload = function () {
-  // gets all elements
-  const ctx = document.getElementById("myChart");
-  const ctx2 = document.getElementById("debtChart");
   let billNames = document.querySelectorAll(".bill-name");
   let billAmounts = document.querySelectorAll(".bill-amount");
-  let income = document.querySelector("#income").dataset.income;
+  income = document.querySelector("#income").dataset.income;
 
   // declares variables
   let xlabel = [];
@@ -22,7 +26,7 @@ window.onload = function () {
   }
 
   // gets total value from first chart (ydata)
-  var debt = ydata.reduce((a, b) => {
+  debt = ydata.reduce((a, b) => {
     return a + b;
   }, 0);
 
@@ -46,15 +50,26 @@ window.onload = function () {
   const debtChart = new Chart(ctx2, {
     type: "bar",
     data: {
-      labels: ["Income", "Debt"], // label names
+      labels: ["Income", "Expenses"], // label names
       datasets: [
         {
-          label: "Debt", // table name
+          label: "Income vs Expenses", // table name
           data: [income, debt], // bill amounts
           backgroundColor: colors, // passes in randomly generated color array
           borderWidth: 1,
         },
       ],
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
     },
   });
 };
@@ -70,4 +85,11 @@ function getRandomColor(array) {
     Math.floor(Math.random() * 256) +
     ",0.7)";
   array.push(hue);
+}
+
+// removes charts
+function removeChild(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }
