@@ -86,15 +86,15 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 
 ##### Matthew Ondrovic
 
-> Creation in progress...
+> [View Contributions](https://github.com/mondrovic/finance-tracker/commits?author=mondrovic)
 
 ##### Matthew Brassey
 
-> Creation in progress...
+> [View Contributions](https://github.com/mondrovic/finance-tracker/commits?author=MBrassey)
 
 ##### Ryan Brown
 
-> Creation in progress...
+> [View Contributions](https://github.com/mondrovic/finance-tracker/commits?author=ryanabrown14)
 
 ##### Taylor Stern
 
