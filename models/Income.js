@@ -8,7 +8,7 @@ Income.init(
     {
       amount: {
         type: DataTypes.DECIMAL,
-        defaultValue: 0,
+        defaultValue: 100,
         allowNull: false,
     },
     user_id: {

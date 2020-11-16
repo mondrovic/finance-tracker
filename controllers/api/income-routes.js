@@ -28,6 +28,17 @@ router.get("/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+router.post("/", (req, res) => {
+  Income.create({
+    amount: req.body.amount,
+    user_id: req.session.user_id,
+  })
+    .then((dbData) => res.json(dbData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 router.put("/:id", (req, res) => {
   Income.update(req.body, {
