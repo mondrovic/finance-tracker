@@ -1,23 +1,45 @@
 <div class="card-header">
     <h2>Dashboard</h2>
+    <div id="income" data-income="{{bills.0.user.income.amount}}"></div>
 </div>
 <div class="col-12">
     <a href="/dashboard/new">
         <h3 class="right">➕ New Bill</h3>
+        </a>
+</div>
+<div class="col-12">
+        <a href="/dashboard/new-category">
+        <h3 class="right">➕ New Category</h3>
+    </a>
+</div>
+<div class="col-12">
+    <a href="/dashboard/edit-income">
+        <h3 class="right">➕ Edit Income</h3>
+    </a>
+</div>
+<div class="col-12">
+    <a href="/dashboard/add-income">
+        <h3 class="right">➕ Add Income</h3>
     </a>
 </div>
 <div class="container col-12">
     <canvas id="myChart" style="chart"></canvas><br />
+    <canvas id="debtChart" style="chart"></canvas>
 </div>
 
+{{#each bills}}
+<div class="card col-12">
+    <div class="card-header">
+        <h2 class="bill-name">{{bill_name}}</h2>
+        <a class="username" href="/dashboard/edit/{{id}}">edit</a>
+    </div>
+    <div class="card-body">
+        <h4>Bill Amount: $<span class="bill-amount">{{amount}}</span></h4>
+    </div>
 
-<div class="list-group col-12">
-    {{#each bills}}
-    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-        <span class="bill-name">{{bill_name}}</span>
-        <span class="bill-amount">{{amount}}</span>
-    </a>
-    {{/each}}
+
+    
 </div>
+{{/each}}
 
 <script src="/javascript/newchart.js"></script>

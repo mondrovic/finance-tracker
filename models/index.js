@@ -1,6 +1,15 @@
 const Bill = require("./Bill");
 const Category = require("./Category");
 const User = require("./User");
+const Income = require("./Income");
+
+Income.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+User.hasOne(Income, {
+  foreignKey: "user_id",
+});
 
 Bill.belongsTo(Category, {
   foreignKey: "category_id",
@@ -24,4 +33,5 @@ module.exports = {
   Bill,
   Category,
   User,
+  Income,
 };

@@ -1,8 +1,14 @@
+const ctx = document.getElementById("myChart");
+const ctx2 = document.getElementById("debtChart");
+let billNames = document.querySelectorAll(".bill-name");
+let billAmounts = document.querySelectorAll(".bill-amount");
+let income;
+let debt;
+
 window.onload = function () {
-  // gets all elements
-  const ctx = document.getElementById("myChart");
-  const billNames = document.querySelectorAll(".bill-name");
-  const billAmounts = document.querySelectorAll(".bill-amount");
+  let billNames = document.querySelectorAll(".bill-name");
+  let billAmounts = document.querySelectorAll(".bill-amount");
+  income = document.querySelector("#income").dataset.income;
 
   // declares variables
   let xlabel = [];
@@ -16,10 +22,13 @@ window.onload = function () {
   }
   //adds all bill amounts to array named ydata
   for (i = 0; i < billAmounts.length; i++) {
-    ydata.push(billAmounts[i].textContent);
+    ydata.push(parseInt(billAmounts[i].textContent));
   }
 
-  console.log(xlabel, ydata);
+  // gets total value from first chart (ydata)
+  debt = ydata.reduce((a, b) => {
+    return a + b;
+  }, 0);
 
   // initializes chart
   const myChart = new Chart(ctx, {
@@ -35,8 +44,32 @@ window.onload = function () {
         },
       ],
     },
+  });
+
+  // adds second chart to show total income vs debt
+  const debtChart = new Chart(ctx2, {
+    type: "bar",
+    data: {
+      labels: ["Income", "Expenses"], // label names
+      datasets: [
+        {
+          label: "Income vs Expenses", // table name
+          data: [income, debt], // bill amounts
+          backgroundColor: colors, // passes in randomly generated color array
+          borderWidth: 1,
+        },
+      ],
+    },
     options: {
-      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
     },
   });
 };
@@ -52,4 +85,11 @@ function getRandomColor(array) {
     Math.floor(Math.random() * 256) +
     ",0.7)";
   array.push(hue);
+}
+
+// removes charts
+function removeChild(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }

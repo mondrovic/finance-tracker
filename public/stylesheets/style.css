@@ -1,9 +1,9 @@
 :root {
-  --primary: #ccdad1;
+  --primary: #ffffff;
   --secondary: #9caea9;
   --tertiary: #788585;
-  --light-dark: #6f6866;
-  --dark: #38302e;
+  --light-dark: #3f7f2b;
+  --dark: #2c4325;
   --border-radius: 0.3rem;
 }
 
@@ -59,7 +59,6 @@ a {
 .username {
   float: right;
   color: var(--primary);
-  display: inline-block;
   font-size: 1.5em;
   padding-right: 0%;
 }
@@ -80,7 +79,7 @@ a {
 
 .nav-links {
   color: var(--primary);
-  padding: 0px 30px 30px 0px;
+  padding: 0px 30px 15px 0px;
   padding-right: 30px;
   display: inline-block;
   text-decoration: none;
@@ -97,6 +96,10 @@ a {
 .edit-link {
   color: var(--tertiary);
   padding-left: 30px;
+}
+
+.bill-name {
+  display: inline-block;
 }
 
 .button {
@@ -176,7 +179,7 @@ a {
 }
 
 .hero {
-  padding: 3% 4%;
+  padding: 3% 4% 0 4%;
   background-color: var(--dark);
   color: var(--primary);
 }
@@ -186,13 +189,14 @@ a {
 }
 
 .app-title {
-  font-size: 3rem;
+  font-size: 20px;
   background-color: var(--primary);
   color: var(--dark);
   padding: 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
+  margin-right: 10px;
 }
 
 .list-group {

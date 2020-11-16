@@ -20,6 +20,13 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 - [x] [Enable Helpers & Implement Tests](https://github.com/mondrovic/Finance-Tracker/issues/12)
 - [x] [Show Authenticated User & Fix /new Controller](https://github.com/mondrovic/Finance-Tracker/issues/13)
 - [x] [feature/chartJS](https://github.com/mondrovic/Finance-Tracker/issues/14)
+- [x] [develop](https://github.com/mondrovic/Finance-Tracker/issues/15)
+- [x] [Provide username & loggedIn: true to edit-bill](https://github.com/mondrovic/Finance-Tracker/issues/16)
+- [x] [Add Total monthly Income and bill Total](https://github.com/mondrovic/Finance-Tracker/issues/17)
+- [x] [dynamically added categories](https://github.com/mondrovic/Finance-Tracker/issues/18)
+- [x] [temporary](https://github.com/mondrovic/Finance-Tracker/issues/19)
+- [x] [Adjust Style & Finish Readme](https://github.com/mondrovic/Finance-Tracker/issues/20)
+- [x] [chart fix](https://github.com/mondrovic/Finance-Tracker/issues/21)
 
 #### Table of Contents
 
@@ -71,11 +78,11 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 > User Routes
 > [<img src="img/Controller1.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/users)
 
-> Post Routes (coming soon)
-> [<img src="img/Controller2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/posts)
+> Bill Routes
+> [<img src="img/Controller2.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/bills)
 
-> Comment Routes (coming soon)
-> [<img src="img/Controller3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/comments)
+> Categories & Income Routes
+> [<img src="img/Controller3.gif">](https://finance-tracker-mondrovic.herokuapp.com/api/categories)
 
 > Tests Passing
 > [<img src="img/Tests.png">](https://finance-tracker-mondrovic.herokuapp.com/)
@@ -86,15 +93,15 @@ Full stack Financial application utilizing ORM with Sequelize and adhering to th
 
 ##### Matthew Ondrovic
 
-> Creation in progress...
+> [View Contributions](https://github.com/mondrovic/finance-tracker/commits?author=mondrovic)
 
-##### Matthew Brassey
+##### Matt Brassey
 
-> Creation in progress...
+> [View Contributions](https://github.com/mondrovic/finance-tracker/commits?author=MBrassey)
 
 ##### Ryan Brown
 
-> Creation in progress...
+> [View Contributions](https://github.com/mondrovic/finance-tracker/commits?author=ryanabrown14)
 
 ##### Taylor Stern
 
