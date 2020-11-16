@@ -20,6 +20,16 @@ const editBillHandler = async function(event) {
   document.location.replace('/dashboard');
 };
 
+const deleteClickHandler = async function() {
+  await fetch(`/api/bills/${billId}`, {
+    method: 'DELETE'
+  });
+
+  document.location.replace('/dashboard');
+};
+
+
 document.querySelector('#edit-bill-form').addEventListener('submit', editBillHandler);
+document.querySelector('#delete-btn').addEventListener('click', deleteClickHandler);
 
 
