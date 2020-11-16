@@ -11,7 +11,7 @@ const editBillHandler = async function(event) {
     method: "PUT",
     body: JSON.stringify({
       amount,
-      user_id
+      
     }),
     headers: { "Content-Type": "application/json" },
   });

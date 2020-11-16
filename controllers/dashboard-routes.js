@@ -75,13 +75,13 @@ router.get("/new-category", withAuth, (req, res) => {
     });
 });
 
-router.get("/new-income", withAuth, (req, res) => {
+router.get("/edit-income", withAuth, (req, res) => {
   Income.findAll({})
     .then((dbIncomeData) => {
       const income = dbIncomeData.map((income) => income.get({ plain: true }));
 
       const user_id = req.session.user_id;
-      res.render("new-income", {
+      res.render("edit-income", {
         income,
         user_id,
         loggedIn: true,
